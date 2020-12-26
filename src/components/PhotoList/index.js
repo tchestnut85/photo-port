@@ -100,8 +100,8 @@ const PhotoList = ({ category }) => {
         },
     ]);
 
-    const currentPhotos = photos.filter((photo) => photo.category === category);
-    console.log(category);
+    const currentPhotos = photos.filter(photo => photo.category === category);
+
     console.log('currentphotos:', currentPhotos);
 
     return (

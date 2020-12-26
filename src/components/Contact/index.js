@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { validateEmail, capitalizeFirstLetter } from '../../utils/helpers';
+import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -35,8 +35,8 @@ function ContactForm() {
 
     return (
         <section>
-            <h1>Contact Me</h1>
             <form id='contact-form' onSubmit={handleSubmit}>
+                <h1 data-testid='h1'>Contact Me</h1>
                 <div>
                     <label htmlFor='name'>Name:</label>
                     <input type='text' name='name' defaultValue={name} onBlur={handleChange}></input>
@@ -49,7 +49,7 @@ function ContactForm() {
                     <label htmlFor='message'>Message:</label>
                     <textarea name='message' rows='5' defaultValue={message} onBlur={handleChange} />
                 </div>
-                <button type='submit'>Submit</button>
+                <button data-testid='button' type='submit'>Submit</button>
             </form>
             {errorMessage && (
                 <div>
