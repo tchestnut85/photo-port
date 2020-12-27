@@ -10,11 +10,6 @@ function Nav(props) {
         setContactSelected
     } = props;
 
-    // const handleClick = (item) => {
-    //     console.log(item);
-    //     return item;
-    // };
-
     return (
         <header className='flex-row space-between'>
             <h2>

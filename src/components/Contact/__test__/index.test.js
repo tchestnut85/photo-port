@@ -5,7 +5,7 @@ import Contact from '..';
 
 afterEach(cleanup);
 
-describe('Contact Component', () => {
+describe('Contact Component renders', () => {
     it('renders', () => {
         render(<Contact />);
     });
@@ -14,7 +14,6 @@ describe('Contact Component', () => {
         const { asFragment } = render(<Contact />);
         expect(asFragment()).toMatchSnapshot();
     });
-
 });
 
 describe('Contact heading matches snapshot', () => {
